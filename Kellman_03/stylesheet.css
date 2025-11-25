@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  
+  .header {
+    background: #333;
+    color: white;
+    padding: 1rem 1.5rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  .kith-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .kith-logo {
+    width: 80px;
+    position: absolute;
+    left: 20px;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s;
+  }
+  
+  .menu a:hover,
+  .menu a:focus {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+  }
+  
+  .menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+@media (max-width: 768px) {
+    .menu-button {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transform: none;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 1000;
+    }
+  
+    .menu {
+      display: none;
+      position: absolute; 
+      top: 60px; 
+      right: 20px; 
+      background: #333;
+      flex-direction: column;
+      gap: 0; 
+      width: 150px; 
+      padding: 0.5rem 0;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  
+    #menu-toggle:checked ~ .menu {
+      display: flex;
+    }
+  
+    .menu a {
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+  }
+  .hat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    padding: 25px;
+    margin: 0 auto;
+  }
+  
+  .hat-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .hat-item p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
